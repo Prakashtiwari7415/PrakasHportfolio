@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Prakash Tiwari – Backend & AI Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Fragment+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f5fb;--fg:#12142a;--mut:#5d6282;--pn:#fff;--ln:#d9dcee;--c1:#4254ff;--c2:#0b8f67;--c3:#a86d00;--c4:#c42a7c;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1224;--fg:#eceefb;--mut:#9aa0c4;--pn:#161a33;--ln:#262b4d;--c1:#7d8bff;--c2:#5be0b0;--c3:#ffc857;--c4:#ff7ab8}}
+:root[data-theme="dark"]{--bg:#0f1224;--fg:#eceefb;--mut:#9aa0c4;--pn:#161a33;--ln:#262b4d;--c1:#7d8bff;--c2:#5be0b0;--c3:#ffc857;--c4:#ff7ab8}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 "Bricolage Grotesque",system-ui,sans-serif}
+.mono{font-family:"Fragment Mono",ui-monospace,Menlo,monospace}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--c1);outline-offset:3px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 22px}
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+header nav{display:flex;gap:22px;align-items:center;font-size:15px}
+header nav a{text-decoration:none;color:var(--mut)}
+header nav a:hover{color:var(--fg)}
+button{font:inherit;cursor:pointer;color:inherit}
+.tg{background:none;border:1px solid var(--ln);border-radius:20px;padding:4px 12px;font-size:14px}
+h1{font-size:clamp(46px,9vw,92px);line-height:.95;letter-spacing:-.035em;font-weight:800;margin:44px 0 18px}
+.lead{max-width:34em;font-size:20px;color:var(--mut);margin:0 0 26px}
+.lead b{color:var(--fg);font-weight:700}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:46px}
+.btn{padding:11px 20px;border-radius:8px;text-decoration:none;border:1px solid var(--ln);font-weight:700}
+.btn.p{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.trace{background:var(--pn);border:1px solid var(--ln);border-radius:14px;overflow:hidden}
+.th{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1px solid var(--ln);font-size:13px;color:var(--mut);gap:10px;flex-wrap:wrap}
+.th button{border:1px solid var(--ln);background:none;border-radius:6px;padding:3px 10px;font-size:13px}
+.rows{padding:10px 0}
+.row{display:grid;grid-template-columns:150px 1fr;align-items:center;width:100%;background:none;border:0;text-align:left;padding:7px 16px;gap:12px}
+.row:hover,.row[aria-pressed="true"]{background:color-mix(in srgb,var(--c1) 9%,transparent)}
+.row .n{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lane{position:relative;height:16px}
+.bar{position:absolute;top:0;height:16px;border-radius:4px;width:0;transition:width .9s cubic-bezier(.2,.7,.2,1)}
+.t-llm{background:var(--c1)}.t-tool{background:var(--c2)}.t-db{background:var(--c3)}.t-sys{background:var(--c4)}
+.det{border-top:1px solid var(--ln);padding:16px;font-size:15px;min-height:96px}
+.det b{font-weight:700}
+.det .k{font-size:13px;color:var(--mut)}
+.note{font-size:13px;color:var(--mut);margin:10px 2px 0}
+section{padding:78px 0 0}
+h2{font-size:clamp(28px,4.5vw,40px);letter-spacing:-.02em;margin:0 0 8px;line-height:1.1}
+.sub{color:var(--mut);margin:0 0 28px;max-width:36em}
+.cmp{background:var(--pn);border:1px solid var(--ln);border-radius:14px;padding:24px}
+.cmp .l{display:flex;justify-content:space-between;font-size:14px;margin-bottom:6px}
+.meter{height:26px;background:var(--bg);border-radius:6px;overflow:hidden;margin-bottom:18px}
+.meter i{display:block;height:100%;width:0;border-radius:6px;transition:width 1.4s cubic-bezier(.2,.7,.2,1)}
+.proj{border-top:1px solid var(--ln);padding:26px 0;display:grid;grid-template-columns:1fr 1.3fr;gap:10px 40px}
+.proj:last-of-type{border-bottom:1px solid var(--ln)}
+.proj h3{margin:0;font-size:24px;letter-spacing:-.01em}
+.proj p{margin:0 0 10px;color:var(--mut)}
+.proj ul{margin:0;padding-left:18px;color:var(--mut)}
+.proj li{margin-bottom:6px}
+.proj li::marker{color:var(--c1)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.tag{font-size:12.5px;border:1px solid var(--ln);border-radius:5px;padding:2px 8px;color:var(--mut)}
+.stack{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:26px}
+.stack h3{font-size:15px;margin:0 0 8px;display:flex;align-items:center;gap:8px}
+.stack h3::before{content:"";width:10px;height:10px;border-radius:3px;background:var(--cc)}
+.stack p{margin:0;color:var(--mut);font-size:15.5px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:30px}
+.facts h3{font-size:19px;margin:0 0 4px}.facts p{margin:0;color:var(--mut);font-size:15.5px}
+.contact{padding:78px 0 60px}
+.contact a.big{font-size:clamp(22px,4.4vw,40px);font-weight:800;letter-spacing:-.02em;text-decoration:none;border-bottom:3px solid var(--c1);word-break:break-all}
+.qrow{display:flex;gap:10px;flex-wrap:wrap}
+#q{flex:1;min-width:200px;background:var(--bg);color:var(--fg);border:1px solid var(--ln);border-radius:8px;padding:11px 14px;font-size:15px}
+.btn{cursor:pointer;font-size:16px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
+.chips button{background:none;border:1px solid var(--ln);border-radius:20px;padding:4px 12px;font-size:13.5px}
+.chips button:hover{border-color:var(--c1)}
+.out{font-size:14px;line-height:1.8;color:var(--mut);min-height:96px}
+.out .s{display:block}.out .s b{color:var(--fg)}.out .ok{color:var(--c2)}
+.em{font-size:clamp(18px,4vw,30px);font-weight:700;word-break:break-all;margin:0 0 18px}
+footer{font-size:13px;color:var(--mut);padding-bottom:30px}
+@media (max-width:720px){.proj{grid-template-columns:1fr}.row{grid-template-columns:104px 1fr}header nav a{display:none}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+ <strong class="mono" style="font-size:15px">prakash.tiwari</strong>
+ <nav><a href="#work">Projects</a><a href="#stack">Stack</a><a href="#contact">Contact</a><button class="tg" id="tg" aria-label="Toggle light or dark theme">Theme</button></nav>
+</header>
+
+<main>
+<h1>Prakash Tiwari</h1>
+<p class="lead"><b>Backend and AI engineer.</b> I build LLM agents, then take them all the way to production: APIs, Docker, CI/CD and live deployment. Final-year CS student at ABES Engineering College</p>
+<div class="cta">
+ <a class="btn p" href="https://github.com/Prakashtiwari7415">See my GitHub</a>
+ <a class="btn" href="#contact">Contact me</a>
+</div>
+
+<div class="trace" role="group" aria-label="Interactive agent run trace">
+ <div class="th mono"><span>Lead-Gen Automator · one agent run</span><button id="rp">Replay run</button></div>
+ <div class="rows" id="rows"></div>
+ <div class="det" id="det" aria-live="polite"></div>
+</div>
+<p class="note">Click a step to see what it does. Bar lengths are illustrative, not measured timings.</p>
+
+<section id="proof">
+ <h2>Cheaper agents, same speed</h2>
+ <p class="sub">In my Resume Builder pipeline I cut prompt tokens by about 90% with LiteLLM and Groq's gpt-oss-20b, and responses still came back in under 5 seconds.</p>
+ <div class="cmp" id="cmp">
+  <div class="l mono"><span>Prompt tokens, before</span><span>100%</span></div>
+  <div class="meter"><i data-w="100" style="background:var(--c4)"></i></div>
+  <div class="l mono"><span>Prompt tokens, after</span><span>~10%</span></div>
+  <div class="meter" style="margin:0"><i data-w="10" style="background:var(--c2)"></i></div>
+ </div>
+</section>
+
+<section id="work">
+ <h2>Projects, all live</h2>
+ <p class="sub">Each one went from idea to a deployed app with a link you can open.</p>
+ <article class="proj">
+  <div><h3>Lead-Gen Automator</h3><p><a href="https://generate-your-leads.streamlit.app">generate-your-leads.streamlit.app</a></p>
+   <div class="tags"><span class="tag">CrewAI</span><span class="tag">FastAPI</span><span class="tag">Streamlit</span><span class="tag">Docker Compose</span><span class="tag">GitHub Actions</span></div></div>
+  <ul><li>CrewAI agents find B2B prospects, research them and draft personalised outreach automatically.</li>
+   <li>Backend runs on Render and frontend on Streamlit Cloud, with secrets in environment variables.</li>
+   <li>Every merge to main is linted, build-checked and deployed by a pipeline.</li></ul>
+ </article>
+ <article class="proj">
+  <div><h3>Personalized Resume Builder</h3><p><a href="https://personalised-resume-builder.onrender.com">personalised-resume-builder.onrender.com</a></p>
+   <div class="tags"><span class="tag">Multi-agent</span><span class="tag">LiteLLM</span><span class="tag">Groq</span><span class="tag">Gradio</span><span class="tag">Docker</span></div></div>
+  <ul><li>Reads PDF or DOCX resumes and produces ATS-ready Markdown and PDF versions.</li>
+   <li>About 90% fewer prompt tokens, with responses under 5 seconds.</li>
+   <li>Containerized, with automatic deployment on every push.</li></ul>
+ </article>
+ <article class="proj">
+  <div><h3>Advanced RAG Chatbot</h3>
+   <div class="tags"><span class="tag">LangGraph</span><span class="tag">Gemini</span><span class="tag">ChromaDB</span><span class="tag">SQLite</span><span class="tag">Tavily</span></div></div>
+  <ul><li>Multi-turn chat over PDF, TXT and Markdown files, with answers that cite their sources.</li>
+   <li>An agentic tool router that picks between web search, Wikipedia, a calculator and time-zone or order-status tools.</li>
+   <li>Conversation state is saved with LangGraph checkpointing, so you can close the app and continue later.</li></ul>
+ </article>
+</section>
+
+<section id="stack">
+ <h2>What I build with</h2>
+ <p class="sub">Colors match the steps in the trace above.</p>
+ <div class="stack">
+  <div style="--cc:var(--c1)"><h3>Agents and LLMs</h3><p>CrewAI, LangChain, LangGraph, LangSmith, RAG, prompt engineering, n8n</p></div>
+  <div style="--cc:var(--c2)"><h3>Backend and APIs</h3><p>Python, FastAPI, Flask, REST design, microservices, JavaScript, React, C++ (STL)</p></div>
+  <div style="--cc:var(--c3)"><h3>Data</h3><p>PostgreSQL, MySQL, ChromaDB, SQL, NumPy, Pandas, Matplotlib</p></div>
+  <div style="--cc:var(--c4)"><h3>Ship and run</h3><p>Docker, GitHub Actions, AWS (EC2, S3, Lambda), Render, Linux, Git, unit testing</p></div>
+ </div>
+</section>
+
+<section id="lab">
+ <h2>Try my tool router</h2>
+ <p class="sub">My RAG chatbot picks a tool for every question. This demo uses simple keyword rules to show the idea. It is a simulation, not the real model.</p>
+ <div class="cmp">
+  <div class="qrow"><input id="q" class="mono" placeholder="Ask anything…" aria-label="Question for the router" autocomplete="off"><button class="btn p" id="go">Route it</button></div>
+  <div class="chips" id="chips"></div>
+  <div class="out mono" id="out" aria-live="polite">Pick an example or type a question.</div>
+ </div>
+</section>
+
+<section class="contact" id="contact">
+ <h2>Hiring for a backend or AI internship?</h2>
+ <p class="sub">I'm looking for a software engineering or backend role where I can build systems that hold up in production.</p>
+ <p class="em mono" id="em">prakashtiwari812021@gmail.com</p>
+ <div class="cta" style="margin:0">
+  <button class="btn p" id="cp">Copy email</button>
+  <a class="btn" target="_blank" rel="noopener" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=prakashtiwari812021@gmail.com&amp;su=Hi%20Prakash">Open in Gmail</a>
+  <a class="btn" href="mailto:prakashtiwari812021@gmail.com">Default mail app</a>
+ </div>
+</section>
+</main>
+<footer>Noida, India · github.com/Prakashtiwari7415</footer>
+</div>
+
+<script>
+var spans=[
+{n:"agent.run",t:"sys",s:0,w:100,d:"The crew starts from a business type and runs the steps below in order.",i:"A target business type",o:"A list of drafted outreach messages"},
+{n:"llm.find_prospects",t:"llm",s:2,w:22,d:"The first agent finds companies that fit the target.",i:"Business type",o:"Candidate prospects"},
+{n:"tool.research",t:"tool",s:24,w:30,d:"A second agent researches each prospect so the message can be specific to them.",i:"One prospect",o:"Notes about that company"},
+{n:"llm.draft_outreach",t:"llm",s:54,w:30,d:"A third agent writes a personalised outreach message from the research.",i:"Prospect notes",o:"A draft message"},
+{n:"api.fastapi",t:"sys",s:84,w:14,d:"The FastAPI backend, running on Render, returns the results to the Streamlit frontend.",i:"Finished drafts",o:"JSON for the UI"}
+];
+var rows=document.getElementById("rows"),det=document.getElementById("det"),bars=[];
+spans.forEach(function(x,k){
+ var b=document.createElement("button");b.className="row";b.setAttribute("aria-pressed","false");
+ b.innerHTML='<span class="n mono">'+x.n+'</span><span class="lane"><i class="bar t-'+x.t+'" style="left:'+x.s+'%"></i></span>';
+ b.onclick=function(){pick(k)};rows.appendChild(b);bars.push(b.querySelector(".bar"));
+});
+function pick(k){
+ var r=rows.children;for(var j=0;j<r.length;j++)r[j].setAttribute("aria-pressed",j===k?"true":"false");
+ var x=spans[k];det.innerHTML='<b class="mono">'+x.n+'</b><p style="margin:6px 0 8px">'+x.d+'</p><span class="k mono">in: '+x.i+' → out: '+x.o+'</span>';
+}
+function play(){
+ var rm=matchMedia("(prefers-reduced-motion:reduce)").matches;
+ bars.forEach(function(b,k){b.style.transitionDelay=rm?"0s":(k*0.35)+"s";b.style.width="0";});
+ requestAnimationFrame(function(){requestAnimationFrame(function(){bars.forEach(function(b,k){b.style.width=spans[k].w+"%"})})});
+}
+document.getElementById("rp").onclick=play;
+pick(0);play();
+var cmp=document.getElementById("cmp");
+new IntersectionObserver(function(e,o){if(e[0].isIntersecting){cmp.querySelectorAll("i").forEach(function(i){i.style.width=i.dataset.w+"%"});o.disconnect()}},{threshold:.4}).observe(cmp);
+var root=document.documentElement;
+try{var sv=localStorage.getItem("theme");if(sv)root.setAttribute("data-theme",sv)}catch(e){}
+document.getElementById("tg").onclick=function(){
+ var dark=root.getAttribute("data-theme")?root.getAttribute("data-theme")==="dark":matchMedia("(prefers-color-scheme:dark)").matches;
+ var nx=dark?"light":"dark";root.setAttribute("data-theme",nx);
+ try{localStorage.setItem("theme",nx)}catch(e){}
+};
+
+var cp=document.getElementById("cp");
+cp.onclick=function(){
+ var t=document.getElementById("em").textContent;
+ function done(){cp.textContent="Copied";setTimeout(function(){cp.textContent="Copy email"},1800)}
+ function fb(){var r=document.createRange();r.selectNode(document.getElementById("em"));var sl=getSelection();sl.removeAllRanges();sl.addRange(r);try{document.execCommand("copy");done()}catch(e){cp.textContent="Failed"}}
+ if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,fb)}else fb();
+};
+var rules=[
+{k:/\b(order|tracking|shipment)\b/i,t:"tool.order_status",w:"This is about an order, so check order status."},
+{k:/\b(time|timezone|time zone|clock)\b/i,t:"tool.timezone",w:"This asks about time somewhere, so use the time-zone tool."},
+{k:/\b(pdf|document|file|uploaded|notes)\b/i,t:"retriever.chroma",w:"This refers to your own files, so search the vector store and cite the source."},
+{k:/\b(latest|news|today|current|price)\b/i,t:"tool.web_search",w:"This needs fresh information, so search the web."},
+{k:/\b(who is|who was|history of|what is|define)\b/i,t:"tool.wikipedia",w:"This is a general knowledge lookup."}];
+var out=document.getElementById("out"),qi=document.getElementById("q");
+function line(a,b,c){var d=document.createElement("span");d.className="s";var x=document.createElement("b");x.textContent=a;d.appendChild(x);d.appendChild(document.createTextNode(" "+b));if(c){d.className+=" "+c}out.appendChild(d)}
+function route(){
+ var q=qi.value.trim();out.textContent="";
+ if(!q){out.textContent="Type a question first.";return}
+ var t,w,res=null,m=q.match(/[\d+\-*\/().% ]{3,}/);
+ if(m&&/\d\s*[+\-*\/%]\s*\d/.test(m[0])){t="tool.calculator";w="This is arithmetic, so use the calculator.";try{res=Function('"use strict";return ('+m[0]+')')()}catch(e){res=null}}
+ else{var r=rules.filter(function(x){return x.k.test(q)})[0];if(r){t=r.t;w=r.w}else{t="llm.answer";w="Nothing needs a tool, so answer directly."}}
+ line("1. router","reads: \""+q.slice(0,80)+"\"");
+ line("2. decision","→ "+t);
+ line("3. why",w);
+ if(res!==null&&isFinite(res))line("4. result","= "+res,"ok");
+ else line("4. next","the tool runs, then the LLM writes the final answer","ok");
+}
+document.getElementById("go").onclick=route;
+qi.addEventListener("keydown",function(e){if(e.key==="Enter")route()});
+var chips=document.getElementById("chips");
+["Who is Alan Turing?","What is 18*24+6?","Where is my order 4821?","Summarise my uploaded PDF","Latest AI news today","Tell me a joke"].forEach(function(x){
+ var b=document.createElement("button");b.textContent=x;b.onclick=function(){qi.value=x;route()};chips.appendChild(b)});
+</script>
+</body>
+</html>
